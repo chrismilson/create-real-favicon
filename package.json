@@ -32,5 +32,8 @@
     "commander": "^2.20.0",
     "glob": "^6.0.4",
     "rfg-api": "^0.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.2"
   }
 }
