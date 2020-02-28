@@ -3,10 +3,8 @@
   "version": "0.0.7",
   "description": "Node.js CLI for RealFaviconGenerator",
   "scripts": {
-    "test": "mocha",
-    "example": "npm run example:generate && npm run example:inject",
-    "example:generate": "node ./real-favicon.js generate example/faviconDescription.json example/faviconData.json example/out",
-    "example:inject": "node ./real-favicon.js inject example/faviconData.json example/out example/*.html"
+    "start": "node ./lib/index.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
