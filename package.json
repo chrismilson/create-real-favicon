@@ -17,7 +17,10 @@
     "cli",
     "RealFaviconGenerator"
   ],
-  "author": "Philippe Bernard <philippe@realfavicongenerator.net> (https://realfavicongenerator.net/)",
+  "author": {
+    "name": "Chris Milson",
+    "email": "chris.w.milson@gmail.com"
+  },
   "license": "MIT",
   "preferGlobal": true,
   "bugs": {
