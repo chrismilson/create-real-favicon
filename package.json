@@ -1,6 +1,6 @@
 {
   "name": "create-real-favicon",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Generate icon and favicon assets from a master icon.",
   "bin": "bin/index.js",
   "files": [
