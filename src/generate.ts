@@ -27,6 +27,7 @@ export default async function generate(
         desktopBrowser: {},
         ios: { pictureAspect: 'noChange' }
       },
+      filesLocation: options.output,
       settings: { usePathAsIs: true }
     }),
     path.resolve(process.cwd(), options.output || '.'),
