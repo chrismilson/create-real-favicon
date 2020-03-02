@@ -2,7 +2,8 @@
   "name": "create-real-favicon",
   "version": "0.2.1",
   "description": "Node.js CLI for RealFaviconGenerator",
-  "bin": "lib/index.js",
+  "bin": "bin/index.js",
+  "files": ["bin/**/*"],
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint src/**/* --ext .js,.jsx,.ts,.tsx",
