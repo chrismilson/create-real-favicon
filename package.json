@@ -4,7 +4,8 @@
   "description": "Node.js CLI for RealFaviconGenerator",
   "scripts": {
     "start": "node ./lib/index.js",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint src/**/* --ext .js,.jsx,.ts,.tsx"
   },
   "repository": {
     "type": "git",
