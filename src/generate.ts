@@ -12,8 +12,8 @@ const { generateFavicon, createRequest } = initRfgApi()
  * @param options
  */
 export default async function generate(
+  masterPath: string,
   options: Command & {
-    master: string
     output?: string
   }
 ): Promise<object> {
@@ -22,7 +22,7 @@ export default async function generate(
   return generateFavicon(
     createRequest({
       apiKey: API_KEY,
-      masterPicture: path.resolve(process.cwd(), options.master),
+      masterPicture: path.resolve(process.cwd(), masterPath),
       design: {
         desktopBrowser: {},
         ios: { pictureAspect: 'noChange' }

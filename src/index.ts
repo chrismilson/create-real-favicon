@@ -16,8 +16,8 @@ program
     '-o, --output <path>',
     'Specity an output directory for the generated assets.'
   )
-  .action(cmd => {
-    generate(cmd || {}).catch(console.error)
+  .action((master, options) => {
+    generate(master, options).catch(console.error)
   })
 
 program.parse(process.argv)
