@@ -9,7 +9,8 @@ const program = new commander.Command(process.env.npm_package_name)
   .arguments('<master>')
   .option(
     '-o, --output <path>',
-    'Specity an output directory for the generated assets.'
+    'Specity an output directory for the generated assets.',
+    'icons'
   )
   .action((master, options) => {
     generate(master, options).catch(console.error)
