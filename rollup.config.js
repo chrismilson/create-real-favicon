@@ -8,5 +8,5 @@ export default {
     format: 'cjs'
   },
   plugins: [typescript(), hashbang()],
-  external: ['rfg-api', 'commander', 'path', 'fs']
+  external: ['rfg-api', 'commander', 'path']
 }

@@ -2,7 +2,6 @@ import { Command } from 'commander'
 import { init as initRfgApi } from 'rfg-api'
 import API_KEY from './API_KEY'
 import path from 'path'
-import fs from 'fs'
 
 const { generateFavicon, createRequest } = initRfgApi()
 
