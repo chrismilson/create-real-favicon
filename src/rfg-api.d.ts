@@ -1,1 +1,1 @@
-declare module 'rfg-api';
+declare module 'rfg-api'

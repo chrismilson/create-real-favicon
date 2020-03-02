@@ -12,7 +12,7 @@ program
   .arguments('<master>')
   .option(
     '-o, --output <path>',
-    'Specity an output directory for the assets.'
+    'Specity an output directory for the generated assets.'
   )
   .action(cmd => {
     generate(cmd || {}).catch(console.error)
