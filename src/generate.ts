@@ -2,6 +2,7 @@ import { Command } from 'commander'
 import { init as initRfgApi } from 'rfg-api'
 import API_KEY from './API_KEY'
 import path from 'path'
+import fs from 'fs'
 
 const { generateFavicon, createRequest } = initRfgApi()
 
@@ -16,6 +17,8 @@ export default async function generate(
     output?: string
   }
 ): Promise<object> {
+  console.log('Generating favicon...')
+
   return generateFavicon(
     createRequest({
       apiKey: API_KEY,
@@ -25,6 +28,16 @@ export default async function generate(
         ios: { pictureAspect: 'noChange' }
       }
     }),
-    path.resolve(process.cwd(), options.output || '.')
+    path.resolve(process.cwd(), options.output || '.'),
+    (err, result) => {
+      if (err) throw err
+
+      fs.writeFileSync(
+        path.resolve(process.cwd(), './response.json'),
+        JSON.stringify(result)
+      )
+
+      console.log('Generation completed.')
+    }
   )
 }
