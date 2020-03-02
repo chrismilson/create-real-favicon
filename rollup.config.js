@@ -1,11 +1,12 @@
 import typescript from 'rollup-plugin-typescript2'
+import hashbang from 'rollup-plugin-hashbang'
 
 export default {
   input: 'src/index.ts',
   output: {
     dir: 'lib',
-    ormat: 'cjs'
+    format: 'cjs'
   },
-  plugins: [typescript()],
+  plugins: [typescript(), hashbang()],
   external: ['rfg-api', 'commander', 'path']
 }
