@@ -25,7 +25,8 @@ export default async function generate(
       masterPicture: path.resolve(process.cwd(), masterPath),
       design: {
         desktopBrowser: {},
-        ios: { pictureAspect: 'noChange' }
+        ios: { pictureAspect: 'noChange' },
+        androidChrome: { pictureAspect: 'noChange' }
       },
       iconsPath: options.output,
       settings: { usePathAsIs: true }
