@@ -26,7 +26,8 @@ export default async function generate(
       design: {
         desktopBrowser: {},
         ios: { pictureAspect: 'noChange' }
-      }
+      },
+      settings: { usePathAsIs: true }
     }),
     path.resolve(process.cwd(), options.output || '.'),
     (err, result) => {
