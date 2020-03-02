@@ -1,11 +1,15 @@
 {
   "name": "create-real-favicon",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Node.js CLI for RealFaviconGenerator",
   "main": "lib/index.js",
   "scripts": {
     "build": "rollup -c",
-    "lint": "eslint src/**/* --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint src/**/* --ext .js,.jsx,.ts,.tsx",
+    "preversion": "yarn lint",
+    "version": "yarn lint --fix && git add -A src",
+    "postversion": "git push && git push --tags",
+    "prepare": "yarn build"
   },
   "repository": {
     "type": "git",
