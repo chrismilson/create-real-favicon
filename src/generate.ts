@@ -32,7 +32,7 @@ export default async function generate(
     (err, result) => {
       if (err) throw err
 
-      console.log(result)
+      console.log(result.favicon.html_code)
 
       console.log('Generation completed.')
     }
