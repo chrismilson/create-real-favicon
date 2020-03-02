@@ -6,11 +6,6 @@ import commander from 'commander'
 const program = new commander.Command(process.env.npm_package_name)
   .version(process.env.npm_package_version || 'Try running through yarn or npm')
   .description(process.env.npm_package_description || '')
-
-program
-  .command('generate')
-  .alias('g')
-  .description('Generate icon assets from a master icon.')
   .arguments('<master>')
   .option(
     '-o, --output <path>',

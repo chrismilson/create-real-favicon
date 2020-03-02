@@ -1,7 +1,7 @@
 {
   "name": "create-real-favicon",
   "version": "0.2.5",
-  "description": "Node.js CLI for RealFaviconGenerator",
+  "description": "Generate icon and favicon assets from a master icon.",
   "bin": "bin/index.js",
   "files": [
     "bin/**/*"
@@ -28,7 +28,6 @@
     "email": "chris.w.milson@gmail.com"
   },
   "license": "MIT",
-  "preferGlobal": true,
   "bugs": {
     "url": "https://github.com/chrismilson/create-real-favicon/issues"
   },
