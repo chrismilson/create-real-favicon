@@ -34,7 +34,7 @@ export default async function generate(
     (err, result) => {
       if (err) throw err
 
-      console.group('The html code to imclude the icons follows:')
+      console.group('The html code to include the icons follows:')
       console.log(result.favicon.html_code)
       console.groupEnd()
 
