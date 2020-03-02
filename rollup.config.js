@@ -4,7 +4,7 @@ import hashbang from 'rollup-plugin-hashbang'
 export default {
   input: 'src/index.ts',
   output: {
-    dir: 'lib',
+    dir: 'bin',
     format: 'cjs'
   },
   plugins: [typescript(), hashbang()],

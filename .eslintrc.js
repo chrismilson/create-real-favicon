@@ -9,5 +9,5 @@ module.exports = {
     ecmaVersion: 9,
     sourceType: 'module'
   },
-  ignorePatterns: ['lib', 'node_modules']
+  ignorePatterns: ['bin', 'node_modules']
 }
