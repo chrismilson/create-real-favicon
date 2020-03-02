@@ -9,9 +9,11 @@ program
   .command('generate')
   .alias('g')
   .description('Generate icon assets from a master icon.')
-  .arguments('[master]')
-  .option('-c, --config <path>', 'Specify a config file for the icon generation.')
-  .option('-o, --output <path>', 'Specity an output directory for the assets.')
+  .arguments('<master>')
+  .option(
+    '-o, --output <path>',
+    'Specity an output directory for the assets.'
+  )
   .action(cmd => {
     generate(cmd || {}).catch(console.error)
   })
