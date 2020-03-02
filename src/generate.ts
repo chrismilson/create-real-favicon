@@ -17,7 +17,8 @@ export default async function generate(
     output?: string
   }
 ): Promise<object> {
-  console.log('Generating favicon...')
+  console.log()
+  console.log('Generating favicon assets...')
 
   return generateFavicon(
     createRequest({
@@ -32,10 +33,7 @@ export default async function generate(
     (err, result) => {
       if (err) throw err
 
-      fs.writeFileSync(
-        path.resolve(process.cwd(), './response.json'),
-        JSON.stringify(result)
-      )
+      console.log(result)
 
       console.log('Generation completed.')
     }
