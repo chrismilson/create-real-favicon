@@ -1,17 +1,25 @@
-# cli-real-favicon
+# create-real-favicon
 
-Use this Node.js CLI to generate a multiplatform favicon with [RealFaviconGenerator](http://realfavicongenerator.net/).
+Use this package to generate icon assets for an app from a high resolution
+master image.
 
-## Getting Started
+## Usage
 
-No time to learn yet-another-set-of-options:
+```bash
+yarn create real-favicon /path/to/master/icon.png
+```
 
-- Go to [RealFaviconGenerator](http://realfavicongenerator.net/), submit your original image and craft your icons:
+*or*
 
-![RealFaviconGenerator's favicon editor](https://cloud.githubusercontent.com/assets/423852/11326158/fef7c99c-9161-11e5-8491-6083d5fc6dc6.png)
+```bash
+npx create-real-favicon /path/to/master/icon.png
+```
 
-- On the result page, click the Node CLI tab. Follow the instructions to setup your favicon in your Gulp project:
+### Options
 
-![Result page, Gulp tab](https://cloud.githubusercontent.com/assets/423852/11326161/02a2842e-9162-11e5-90d6-9865e2a73371.png)
+There are limited options currently.
 
-Et voilà! Your favicon is up and ready.
+- `--no-ios` Will cease production of apple touch icons.
+- `--no-desktop` Will cease production of desktob browser icons.
+- `--no-android` Will cease production of android chrome icons.
+- `-o <output-path>` Will place the generated files at a specified path.
