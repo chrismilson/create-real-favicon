@@ -12,6 +12,9 @@ const program = new commander.Command(process.env.npm_package_name)
     'Specity an output directory for the generated assets.',
     'icons'
   )
+  .option('--no-ios', 'Do not generate ios icons.')
+  .option('--no-desktop', 'Do not generate desktop browser icons.')
+  .option('--no-android', 'Do not generate android chrome icons.')
   .action((master, options) => {
     generate(master, options).catch(console.error)
   })

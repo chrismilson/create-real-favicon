@@ -14,22 +14,45 @@ export default async function generate(
   masterPath: string,
   options: Command & {
     output?: string
+    desktop: boolean
+    ios: boolean
+    android: boolean
   }
 ): Promise<object> {
   console.log()
   console.log('Generating favicon assets...')
 
+  const design: {
+    desktopBrowser?: object
+    ios?: object
+    androidChrome?: object
+  } = {}
+
+  if (options.desktop) {
+    design.desktopBrowser = {}
+  }
+  if (options.ios) {
+    design.ios = { pictureAspect: 'noChange' }
+  }
+  if (options.android) {
+    design.androidChrome = { pictureAspect: 'noChange' }
+  }
+
+  // If the designs object has no specifications, then the api will be requested
+  // to roduce nothing.
+  // In this case we should just abort instead of sending the request.
+  if (Object.keys(design).length < 1) {
+    console.log('No favicons will be generated. Aborting...')
+    return
+  }
+
   return generateFavicon(
     createRequest({
       apiKey: API_KEY,
       masterPicture: path.resolve(process.cwd(), masterPath),
-      design: {
-        desktopBrowser: {},
-        ios: { pictureAspect: 'noChange' },
-        androidChrome: { pictureAspect: 'noChange' }
-      },
       iconsPath: options.output,
-      settings: { usePathAsIs: true }
+      settings: { usePathAsIs: true },
+      design
     }),
     path.resolve(process.cwd(), options.output || '.'),
     (err, result) => {
